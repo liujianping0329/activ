@@ -1,0 +1,485 @@
+2018-07-25 11:46:18.018 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 10292 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-25 11:46:18.023 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-25 11:46:20.031 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 11:46:20.044 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-25 11:46:20.045 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-25 11:46:20.050 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-25 11:46:20.177 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-25 11:46:20.676 - WARN  [      main] letWebServerApplicationContext [     AbstractApplicationContext.java:558] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userLoginController': Unsatisfied dependency expressed through field 'userLoginService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userLoginServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [E:\code\activ\target\classes\com\datsjin\activ\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [com/datsjin/activ/config/MyBatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\code\activ\target\classes\mybatis\1.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+2018-07-25 11:46:20.680 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Stopping service [Tomcat]
+2018-07-25 11:46:20.710 - ERROR [      main] o.s.boot.SpringApplication     [              SpringApplication.java:842] : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userLoginController': Unsatisfied dependency expressed through field 'userLoginService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userLoginServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [E:\code\activ\target\classes\com\datsjin\activ\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [com/datsjin/activ/config/MyBatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\code\activ\target\classes\mybatis\1.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.datsjin.activ.ActivApplication.main(ActivApplication.java:14)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userLoginServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [E:\code\activ\target\classes\com\datsjin\activ\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [com/datsjin/activ/config/MyBatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\code\activ\target\classes\mybatis\1.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [E:\code\activ\target\classes\com\datsjin\activ\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [com/datsjin/activ/config/MyBatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\code\activ\target\classes\mybatis\1.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [com/datsjin/activ/config/MyBatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\code\activ\target\classes\mybatis\1.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1256)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1430)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\code\activ\target\classes\mybatis\1.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	... 55 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\code\activ\target\classes\mybatis\1.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
+	at com.datsjin.activ.config.MyBatisConfig.sqlSessionFactoryBean(MyBatisConfig.java:51)
+	at com.datsjin.activ.config.MyBatisConfig$$EnhancerBySpringCGLIB$$4c60512b.CGLIB$sqlSessionFactoryBean$2(<generated>)
+	at com.datsjin.activ.config.MyBatisConfig$$EnhancerBySpringCGLIB$$4c60512b$$FastClassBySpringCGLIB$$d571bc8e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at com.datsjin.activ.config.MyBatisConfig$$EnhancerBySpringCGLIB$$4c60512b.sqlSessionFactoryBean(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 56 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:259)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:125)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:78)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:520)
+	... 69 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 文件提前结束。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1014)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:257)
+	... 72 common frames omitted
+2018-07-25 11:46:31.510 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 11720 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-25 11:46:31.514 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-25 11:46:33.158 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 11:46:33.169 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-25 11:46:33.170 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-25 11:46:33.174 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-25 11:46:33.314 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-25 11:46:35.399 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-25 11:46:35.414 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-25 11:46:35.429 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-25 11:46:35.577 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 11:46:35.587 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-25 11:46:35.610 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 4.69 seconds (JVM running for 5.566)
+2018-07-25 11:50:10.894 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 12172 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-25 11:50:10.897 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-25 11:50:12.521 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 11:50:12.531 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-25 11:50:12.532 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-25 11:50:12.551 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-25 11:50:12.671 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-25 11:50:12.856 - WARN  [      main] redAnnotationBeanPostProcessor [iredAnnotationBeanPostProcessor.java:438] : Autowired annotation is not supported on static fields: public static java.lang.String com.datsjin.activ.ActivApplication.projectName
+2018-07-25 11:50:14.695 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-25 11:50:14.710 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-25 11:50:14.725 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-25 11:50:14.872 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 11:50:14.882 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-25 11:50:14.902 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 4.654 seconds (JVM running for 5.525)
+2018-07-25 11:50:14.906 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:20] : SpringBoot Start Success: null
+2018-07-25 11:51:25.268 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 10292 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-25 11:51:25.271 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-25 11:51:26.879 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 11:51:26.890 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-25 11:51:26.891 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-25 11:51:26.909 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-25 11:51:27.032 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-25 11:51:29.037 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-25 11:51:29.052 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-25 11:51:29.067 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-25 11:51:29.214 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 11:51:29.224 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-25 11:51:29.243 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 4.55 seconds (JVM running for 5.421)
+2018-07-25 11:51:29.248 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-25 11:51:55.233 - INFO  [787-exec-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-25 11:53:19.921 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 11464 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-25 11:53:19.925 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-25 11:53:21.555 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 11:53:21.580 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-25 11:53:21.580 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-25 11:53:21.585 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-25 11:53:21.705 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-25 11:53:23.770 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-25 11:53:23.786 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-25 11:53:23.802 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-25 11:53:23.955 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 11:53:23.965 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-25 11:53:23.988 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 4.688 seconds (JVM running for 5.546)
+2018-07-25 11:53:23.993 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-25 11:54:45.156 - INFO  [787-exec-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-25 13:46:24.273 - INFO  [787-exec-6] c.a.druid.pool.DruidDataSource [                DruidDataSource.java:669] : {dataSource-1} inited
+2018-07-25 13:46:53.540 - ERROR [787-exec-3] c.d.a.e.WebExceptionHandler    [             WebExceptionHandler.java:49] : Type definition error: [simple type, class com.datsjin.activ.vo.UserLoginVO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.datsjin.activ.vo.UserLoginVO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.datsjin.activ.contants.BaseResponse["data"])
+org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class com.datsjin.activ.vo.UserLoginVO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.datsjin.activ.vo.UserLoginVO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.datsjin.activ.contants.BaseResponse["data"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:293)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:272)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:180)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:119)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.datsjin.activ.vo.UserLoginVO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.datsjin.activ.contants.BaseResponse["data"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1191)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:312)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:71)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:33)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:727)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:719)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:155)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1396)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:913)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:286)
+	... 52 common frames omitted
+2018-07-25 13:48:12.333 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 13148 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-25 13:48:12.338 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-25 13:48:13.995 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 13:48:14.006 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-25 13:48:14.007 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-25 13:48:14.011 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-25 13:48:14.149 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-25 13:48:16.194 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-25 13:48:16.210 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-25 13:48:16.225 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-25 13:48:16.382 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 13:48:16.393 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-25 13:48:16.415 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 4.706 seconds (JVM running for 5.738)
+2018-07-25 13:48:16.418 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-25 13:48:24.050 - INFO  [787-exec-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-25 13:48:24.162 - INFO  [787-exec-1] c.a.druid.pool.DruidDataSource [                DruidDataSource.java:669] : {dataSource-1} inited
+2018-07-25 13:48:24.816 - ERROR [787-exec-1] c.d.a.e.WebExceptionHandler    [             WebExceptionHandler.java:49] : Type definition error: [simple type, class com.datsjin.activ.vo.UserLoginVO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.datsjin.activ.vo.UserLoginVO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.datsjin.activ.contants.BaseResponse["data"])
+org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class com.datsjin.activ.vo.UserLoginVO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.datsjin.activ.vo.UserLoginVO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.datsjin.activ.contants.BaseResponse["data"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:293)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:272)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:180)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:119)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.datsjin.activ.vo.UserLoginVO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.datsjin.activ.contants.BaseResponse["data"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1191)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:312)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:71)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:33)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:727)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:719)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:155)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1396)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:913)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:286)
+	... 52 common frames omitted
+2018-07-25 13:51:27.397 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 11236 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-25 13:51:27.401 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-25 13:51:29.075 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 13:51:29.086 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-25 13:51:29.086 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-25 13:51:29.090 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-25 13:51:29.228 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-25 13:51:31.222 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-25 13:51:31.238 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-25 13:51:31.252 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-25 13:51:31.396 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-25 13:51:31.408 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-25 13:51:31.426 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 4.61 seconds (JVM running for 5.462)
+2018-07-25 13:51:31.432 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-25 13:51:45.925 - INFO  [787-exec-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-25 13:51:46.042 - INFO  [787-exec-1] c.a.druid.pool.DruidDataSource [                DruidDataSource.java:669] : {dataSource-1} inited
+2018-07-25 14:09:20.366 - INFO  [      main] c.d.a.ActivApplicationTests    [               StartupInfoLogger.java:50] : Starting ActivApplicationTests on ljp with PID 13360 (started by ����ƽ1 in E:\code\activ)
+2018-07-25 14:09:20.368 - INFO  [      main] c.d.a.ActivApplicationTests    [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-25 14:09:24.869 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-25 14:09:24.897 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-25 14:09:24.916 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-25 14:09:25.119 - INFO  [      main] c.d.a.ActivApplicationTests    [               StartupInfoLogger.java:59] : Started ActivApplicationTests in 5.193 seconds (JVM running for 6.342)
+2018-07-25 14:09:58.725 - INFO  [      main] c.d.a.ActivApplicationTests    [               StartupInfoLogger.java:50] : Starting ActivApplicationTests on ljp with PID 13984 (started by ����ƽ1 in E:\code\activ)
+2018-07-25 14:09:58.728 - INFO  [      main] c.d.a.ActivApplicationTests    [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-25 14:10:03.354 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-25 14:10:03.379 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-25 14:10:03.406 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-25 14:10:03.570 - INFO  [      main] c.d.a.ActivApplicationTests    [               StartupInfoLogger.java:59] : Started ActivApplicationTests in 5.317 seconds (JVM running for 6.308)
+2018-07-26 10:14:26.772 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 15212 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-26 10:14:26.775 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-26 10:14:28.464 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 10:14:28.476 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-26 10:14:28.476 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-26 10:14:28.481 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-26 10:14:28.627 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-26 10:14:30.664 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-26 10:14:30.680 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-26 10:14:30.695 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-26 10:14:30.842 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 10:14:30.857 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-26 10:14:30.887 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 4.787 seconds (JVM running for 5.669)
+2018-07-26 10:14:30.890 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-26 10:16:11.247 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 8664 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-26 10:16:11.251 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-26 10:16:39.543 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:50] : Starting ActivApplication on ljp with PID 13652 (E:\code\activ\target\classes started by 刘建平1 in E:\code\activ)
+2018-07-26 10:16:39.546 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-26 10:16:41.258 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 10:16:41.272 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-26 10:16:41.272 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-26 10:16:41.277 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-26 10:16:41.414 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-26 10:16:43.502 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-26 10:16:43.518 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-26 10:16:43.534 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-26 10:16:43.679 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 10:16:43.770 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-26 10:16:43.831 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 4.91 seconds (JVM running for 5.776)
+2018-07-26 10:16:43.850 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-26 10:28:35.512 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-26 10:28:38.104 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 10:28:38.114 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-26 10:28:38.115 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-26 10:28:38.120 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-26 10:28:38.261 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-26 10:28:42.105 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-26 10:28:42.121 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-26 10:28:42.137 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-26 10:28:42.300 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 10:28:42.316 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-26 10:28:42.345 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 11.501 seconds (JVM running for 13.533)
+2018-07-26 10:28:42.349 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-26 10:57:27.632 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-26 10:57:29.531 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 10:57:29.541 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-26 10:57:29.542 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-26 10:57:29.546 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-26 10:57:29.685 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-26 10:57:33.363 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-26 10:57:33.380 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-26 10:57:33.397 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-26 10:57:33.555 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 10:57:33.573 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-26 10:57:33.607 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 7.52 seconds (JVM running for 8.528)
+2018-07-26 10:57:33.611 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-26 10:57:58.504 - INFO  [787-exec-2] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-26 10:58:04.936 - INFO  [787-exec-6] c.a.druid.pool.DruidDataSource [                DruidDataSource.java:669] : {dataSource-1} inited
+2018-07-26 11:00:29.889 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-26 11:00:31.786 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 11:00:31.797 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-26 11:00:31.797 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-26 11:00:31.802 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-26 11:00:31.938 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-26 11:00:35.659 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-26 11:00:35.676 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-26 11:00:35.694 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-26 11:00:35.872 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 11:00:35.897 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-26 11:00:35.927 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 7.79 seconds (JVM running for 8.879)
+2018-07-26 11:00:35.930 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-26 11:00:43.471 - INFO  [787-exec-2] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-26 11:00:43.599 - INFO  [787-exec-2] c.a.druid.pool.DruidDataSource [                DruidDataSource.java:669] : {dataSource-1} inited
+2018-07-26 11:02:40.754 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-26 11:02:42.958 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 11:02:42.971 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-26 11:02:42.972 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-26 11:02:42.977 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-26 11:02:43.115 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-26 11:02:48.122 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-26 11:02:48.139 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-26 11:02:48.156 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-26 11:02:48.323 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 11:02:48.339 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-26 11:02:48.368 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 9.202 seconds (JVM running for 10.235)
+2018-07-26 11:02:48.373 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-26 11:02:49.199 - INFO  [-127.0.0.1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-26 11:02:49.229 - INFO  [-127.0.0.1] c.a.druid.pool.DruidDataSource [                DruidDataSource.java:669] : {dataSource-1} inited
+2018-07-26 11:02:49.858 - INFO  [-127.0.0.1] io.lettuce.core.EpollProvider  [                    Slf4JLogger.java:101] : Starting without optional epoll library
+2018-07-26 11:02:49.860 - INFO  [-127.0.0.1] io.lettuce.core.KqueueProvider [                    Slf4JLogger.java:101] : Starting without optional kqueue library
+2018-07-26 11:03:44.668 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-26 11:03:46.856 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 11:03:46.867 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-26 11:03:46.868 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-26 11:03:46.873 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-26 11:03:47.017 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-26 11:03:52.020 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-26 11:03:52.037 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-26 11:03:52.055 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-26 11:03:52.221 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 11:03:52.238 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-26 11:03:52.268 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 9.258 seconds (JVM running for 10.54)
+2018-07-26 11:03:52.273 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-26 11:03:52.872 - INFO  [-127.0.0.1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-26 11:03:52.890 - INFO  [-127.0.0.1] c.a.druid.pool.DruidDataSource [                DruidDataSource.java:669] : {dataSource-1} inited
+2018-07-26 11:03:53.557 - INFO  [-127.0.0.1] io.lettuce.core.EpollProvider  [                    Slf4JLogger.java:101] : Starting without optional epoll library
+2018-07-26 11:03:53.559 - INFO  [-127.0.0.1] io.lettuce.core.KqueueProvider [                    Slf4JLogger.java:101] : Starting without optional kqueue library
+2018-07-26 11:14:27.789 - INFO  [      main] c.d.activ.ActivApplication     [              SpringApplication.java:663] : The following profiles are active: dev
+2018-07-26 11:14:29.979 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Initializing ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 11:14:29.989 - INFO  [      main] o.a.c.core.StandardService     [                   DirectJDKLog.java:180] : Starting service [Tomcat]
+2018-07-26 11:14:29.989 - INFO  [      main] o.a.c.core.StandardEngine      [                   DirectJDKLog.java:180] : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-07-26 11:14:29.994 - INFO  [tartStop-1] o.a.c.c.AprLifecycleListener   [                   DirectJDKLog.java:180] : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\13617\AppData\Local\Microsoft\WindowsApps;;.]
+2018-07-26 11:14:30.142 - INFO  [tartStop-1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring embedded WebApplicationContext
+2018-07-26 11:14:35.168 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:120] : Context refreshed
+2018-07-26 11:14:35.185 - INFO  [      main] cumentationPluginsBootstrapper [ocumentationPluginsBootstrapper.java:123] : Found 1 custom documentation plugin(s)
+2018-07-26 11:14:35.202 - INFO  [      main] w.s.ApiListingReferenceScanner [      ApiListingReferenceScanner.java:41] : Scanning for api listing references
+2018-07-26 11:14:35.381 - INFO  [      main] o.a.c.http11.Http11NioProtocol [                   DirectJDKLog.java:180] : Starting ProtocolHandler ["http-nio-0.0.0.0-8787"]
+2018-07-26 11:14:35.399 - INFO  [      main] o.a.t.util.net.NioSelectorPool [                   DirectJDKLog.java:180] : Using a shared selector for servlet write/read
+2018-07-26 11:14:35.430 - INFO  [      main] c.d.activ.ActivApplication     [               StartupInfoLogger.java:59] : Started ActivApplication in 9.206 seconds (JVM running for 10.881)
+2018-07-26 11:14:35.435 - INFO  [      main] c.d.activ.ActivApplication     [                ActivApplication.java:22] : SpringBoot Start Success: datsjin-activ
+2018-07-26 11:14:36.286 - INFO  [-127.0.0.1] o.a.c.c.C.[.[localhost].[/]    [                   DirectJDKLog.java:180] : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-26 11:14:36.291 - INFO  [-127.0.0.1] c.a.druid.pool.DruidDataSource [                DruidDataSource.java:669] : {dataSource-1} inited
+2018-07-26 11:14:36.975 - INFO  [-127.0.0.1] io.lettuce.core.EpollProvider  [                    Slf4JLogger.java:101] : Starting without optional epoll library
+2018-07-26 11:14:36.977 - INFO  [-127.0.0.1] io.lettuce.core.KqueueProvider [                    Slf4JLogger.java:101] : Starting without optional kqueue library
